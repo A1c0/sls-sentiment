@@ -1,0 +1,19 @@
+service: sentiment-analyse
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  sentiment-analyse:
+    handler: handler.main
+    events:
+      - http: POST /getSentiment
+
+plugins:
+  - serverless-offline
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux

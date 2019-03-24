@@ -2,5 +2,15 @@
   "name": "pocPythonServerless",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "serverless offline start --host 0.0.0.0 --skipCacheInvalidation"
+  },
+  "dependencies": {
+    "serverless": "^1.38.0",
+    "serverless-offline": "^4.7.0"
+  },
+  "devDependencies": {
+    "serverless-python-requirements": "^4.3.0"
+  }
 }
